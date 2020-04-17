@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/sign_in_buttton"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_above="@id/sign_up_btn"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/sign_in_btn"
+        android:text="Sign in"
+        android:textColor="@android:color/background_light" />
+
+    <Button
+        android:id="@+id/sign_up_btn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="80dp"
+        android:background="@drawable/sign_buttons"
+        android:text="Sign Up" />
+
+    <ImageButton
+        android:id="@+id/sign_google"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/sign_google"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/google" />
+
+    <EditText
+        android:id="@+id/heloText"
+        android:layout_width="278dp"
+        android:layout_height="99dp"
+        android:layout_below="@id/sign_google"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="30dp"
+        android:autoText="true"
+        android:ems="8"
+        android:fontFamily="sans-serif"
+        android:inputType="textPersonName"
+        android:keepScreenOn="false"
+        android:text="Casher"
+        android:textColor="#ffffff"
+        android:textSize="36sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/single_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/heloText"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="4dp"
+        android:text="Controll yout money with me"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp" />
+
+</RelativeLayout>

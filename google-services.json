@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "145972646238",
+    "firebase_url": "https://casher-3b0aa.firebaseio.com",
+    "project_id": "casher-3b0aa",
+    "storage_bucket": "casher-3b0aa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:145972646238:android:04d10af328a27b66fcbfcf",
+        "android_client_info": {
+          "package_name": "com.example.casher"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "145972646238-2kp9a3ungsloq9396l2q13kphk7untul.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0oZnF4BmGJ2qzWuXjQD7bchspyLcJ_xg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "145972646238-2kp9a3ungsloq9396l2q13kphk7untul.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
