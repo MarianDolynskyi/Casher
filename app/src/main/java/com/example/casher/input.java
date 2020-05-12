@@ -14,14 +14,9 @@ public class input extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.dialog2);
     }
-    public void getText()
-    {
-        String category = findViewById(R.id.categoryInput22);
-    }
+
     public void Go(View view) {
-        String category = findViewById(R.id.categoryInput22);
-        int price = findViewById(R.id.SumInput);
-        ClipData.Item item = new ClipData.Item(category.toString(),Integer.valueOf(price))
+
         Intent intent = new Intent(this, sample2.class);
         startActivity(intent);
     }
