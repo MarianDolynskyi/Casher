@@ -55,7 +55,7 @@
         android:inputType="textPersonName"
         android:keepScreenOn="false"
         android:text="Casher"
-        android:textColor="#ffffff"
+        android:textColor="#330d45"
         android:textSize="36sp"
         android:textStyle="bold" />
 
@@ -67,7 +67,14 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="4dp"
         android:text="Controll yout money with me"
-        android:textColor="#FFFFFF"
+        android:textColor="#330d45"
         android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        android:visibility="invisible" />
 
 </RelativeLayout>

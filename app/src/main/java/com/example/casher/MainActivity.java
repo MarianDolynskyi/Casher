@@ -4,11 +4,13 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -27,23 +29,29 @@ import com.google.firebase.auth.GoogleAuthProvider;
 
 import java.net.URI;
 
+import static com.example.casher.R.id.button;
+import static com.example.casher.R.id.sign_google;
+import static com.example.casher.R.id.sign_up_btn;
+
 public class MainActivity extends AppCompatActivity {
-    private SignInButton signInButton;
+//    private Button btnSignIn;
     private GoogleSignInClient mGoogleSignInClient;
     private  String TAG = "MainActivity";
     private FirebaseAuth mAuth;
     private Button btnSignOut;
+    private ImageButton btnSignIn;
     private int RC_SIGN_IN = 1;
+
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        signInButton = findViewById(R.id.sign_in_btn);
         mAuth = FirebaseAuth.getInstance();
-        btnSignOut = findViewById(R.id.sign_up_btn);
+        btnSignOut = findViewById(button);
+        btnSignIn = findViewById(sign_google);
 
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
@@ -52,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
 
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
 
-        signInButton.setOnClickListener(new View.OnClickListener() {
+        btnSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 signIn();
@@ -89,6 +97,8 @@ public class MainActivity extends AppCompatActivity {
             GoogleSignInAccount acc = completedTask.getResult(ApiException.class);
             Toast.makeText(MainActivity.this,"Signed In Successfully",Toast.LENGTH_SHORT).show();
             FirebaseGoogleAuth(acc);
+            Intent intent = new Intent(MainActivity.this, sample.class);
+            startActivity(intent);
         }
         catch (ApiException e){
             Toast.makeText(MainActivity.this,"Sign In Failed",Toast.LENGTH_SHORT).show();
@@ -107,6 +117,8 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(MainActivity.this, "Successful", Toast.LENGTH_SHORT).show();
                         FirebaseUser user = mAuth.getCurrentUser();
                         updateUI(user);
+                        Intent intent = new Intent(MainActivity.this, sample.class);
+                        startActivity(intent);
                     } else {
                         Toast.makeText(MainActivity.this, "Failed", Toast.LENGTH_SHORT).show();
                         updateUI(null);

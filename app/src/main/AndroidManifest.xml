@@ -16,5 +16,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".sample"
+            android:label="@string/app_name">
+        </activity>
+        <activity android:name=".input"
+            android:label="@string/app_name">
+        </activity>
+        <activity android:name=".sample2"
+            android:label="@string/app_name">
+        </activity>
     </application>
 </manifest>
