@@ -20,7 +20,7 @@
         android:textSize="18sp" />
 
     <TextView
-        android:id="@+id/countView"
+        android:id="@+id/unitView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="0"
@@ -28,7 +28,7 @@
         android:textSize="1sp"
         android:visibility="invisible" />
     <TextView
-        android:id="@+id/unitView"
+        android:id="@+id/countView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="2"
