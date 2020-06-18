@@ -2,6 +2,7 @@ package com.example.casher;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -20,26 +21,37 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class CustomDialogFragment extends DialogFragment {
 private EditText CategoryInput;
-private EditText SumInput;
+//final CustomDialogFragment context = this;
 
-private FirebaseAuth mAuth;
-private DatabaseReference myRef;
+//    private FirebaseAuth mAuth;
+//    private DatabaseReference myRef;
+//    private EditText SumInput2;
 
-FirebaseUser user = mAuth.getInstance().getCurrentUser();
+//    FirebaseUser user = mAuth.getInstance().getCurrentUser();
 
 
     @NonNull
     public Dialog onCreateDialog(Bundle savedInstanceState) {
-        myRef = FirebaseDatabase.getInstance().getReference();
+//        LayoutInflater inflater = this.getLayoutInflater();
+//        View view = inflater.inflate(R.layout.dialog, null);
+//        final FirebaseAuth mAuth;
         AlertDialog.Builder builder=new AlertDialog.Builder(getActivity());
+//        LayoutInflater li = CustomDialogFragment.from(context);
+//        View promptsView = li.inflate(R.layout.prompt, null);
         return builder
                 .setTitle("Витрати")
                 .setView(R.layout.dialog)
                 .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     @Override
-                    public void onClick(DialogInterface dialog, int which) {
-//                        SumInput.getText();
-                        myRef.child(user.getUid()).child("Costs").push().setValue(SumInput.getText().toString());
+                    public void onClick(DialogInterface dialog, int which){
+                        final FirebaseAuth mAuth = null;
+                        final DatabaseReference myRef;
+                        final EditText SumInput2;
+
+                        FirebaseUser user = mAuth.getInstance().getCurrentUser();
+                        SumInput2 = (EditText) getView().findViewById(R.id.SumInput2);
+                        myRef = FirebaseDatabase.getInstance().getReference();
+                        myRef.child(user.getUid()).child("Costs").push().setValue(SumInput2.getText().toString());
                     }
                 })
 //                .setPositiveButton("OK", null)
