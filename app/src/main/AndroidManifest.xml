@@ -22,5 +22,17 @@
         <activity android:name=".input"
             android:label="@string/app_name">
         </activity>
+        <activity android:name=".AddToDatabase"
+            android:label="Casher">
+        </activity>
+        <activity android:name=".ActivityCharts"
+            android:label="Casher">
+        </activity>
+        <activity android:name=".ActivityCharts2"
+            android:label="Casher">
+        </activity>
+        <activity android:name=".sample2"
+            android:label="Casher">
+        </activity>
     </application>
 </manifest>

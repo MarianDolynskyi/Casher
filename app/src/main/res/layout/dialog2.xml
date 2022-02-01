@@ -10,38 +10,63 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:gravity="center"
-        android:text="Введіть категорію та суму витрат"
+        android:text="Введіть категорію та суму"
         android:textColor="#000000"
         android:textSize="24sp" />
 
 
     <EditText
-        android:id="@+id/categoryInput22"
+        android:id="@+id/categoryCostsInput"
         android:layout_width="150dp"
         android:layout_height="50dp"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="50dp"
         android:hint="категорія"
         android:textColor="#000000"
         android:textColorHint="#000000" />
 
     <EditText
-        android:id="@+id/SumInput2"
+        android:id="@+id/sumCostsInput"
         android:layout_width="150dp"
         android:layout_height="50dp"
-        android:layout_marginStart="200dp"
+        android:layout_marginStart="220dp"
         android:layout_marginTop="-50dp"
         android:hint="сума"
+        android:inputType="number"
+        android:textColor="#000000"
         android:textColorHint="#000000" />
 
     <Button
-        android:id="@+id/button3"
-        android:layout_width="200dp"
+        android:id="@+id/btnSubmitIncome"
+        android:layout_width="130dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="100dp"
+        android:layout_marginLeft="230dp"
         android:layout_marginTop="50dp"
-        android:background="@drawable/sign_buttons"
+        android:background="@drawable/income_buttons"
         android:onClick="Go"
-        android:text="Ввести" />
+        android:text="Дохід"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/btnSubmitCosts"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="-50dp"
+        android:background="@drawable/costs_buttons"
+        android:onClick="Go"
+        android:text="Витрати"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="95dp"
+        android:layout_marginTop="370dp"
+        android:background="@drawable/cancel_buttons"
+        android:onClick="startActivitySample"
+        android:text="Скасувати"
+        android:textColor="#FFFFFF" />
 
 </LinearLayout>

@@ -28,9 +28,9 @@ public class input extends AppCompatActivity {
     }
 
     public void Go(View view) {
-        SumInput2 = (EditText)findViewById(R.id.SumInput2);
-        myRef = FirebaseDatabase.getInstance().getReference();
-        myRef.child(user.getUid()).child("Costs").push().setValue(SumInput2.getText().toString());
+//        SumInput2 = (EditText)findViewById(R.id.SumInput2);
+//        myRef = FirebaseDatabase.getInstance().getReference();
+//        myRef.child(user.getUid()).child("Costs").push().setValue(SumInput2.getText().toString());
 //        Intent intent = new Intent(this, CustomDialogFragment.class);
 //        startActivity(intent);
     }

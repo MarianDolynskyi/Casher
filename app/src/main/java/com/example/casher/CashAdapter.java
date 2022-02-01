@@ -16,6 +16,7 @@
 //        private LayoutInflater inflater;
 //        private int layout;
 //        private ArrayList<MoneyValue> productList;
+////        private Object MoneyValue;
 //
 //        ProductAdapter(Context context, int resource, ArrayList<MoneyValue> products) {
 //            super(context, resource, products);

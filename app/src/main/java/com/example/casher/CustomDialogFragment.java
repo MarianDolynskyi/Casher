@@ -46,12 +46,14 @@ private EditText CategoryInput;
                     public void onClick(DialogInterface dialog, int which){
                         final FirebaseAuth mAuth = null;
                         final DatabaseReference myRef;
-                        final EditText SumInput2;
-
-                        FirebaseUser user = mAuth.getInstance().getCurrentUser();
-                        SumInput2 = (EditText) getView().findViewById(R.id.SumInput2);
-                        myRef = FirebaseDatabase.getInstance().getReference();
-                        myRef.child(user.getUid()).child("Costs").push().setValue(SumInput2.getText().toString());
+                        final EditText SumInputCosts;
+                        final EditText CategoryInputCosts;
+//
+//                        FirebaseUser user = mAuth.getInstance().getCurrentUser();
+//                        SumInputCosts = getView().findViewById(R.id.SumInputCosts);
+//                        CategoryInputCosts = getView().findViewById(R.id.CategoryInputCosts);
+//                        myRef = FirebaseDatabase.getInstance().getReference();
+//                        myRef.child(user.getUid()).child("Costs").push().setValue(CategoryInputCosts.getText().toString(), SumInputCosts.getText().toString());
                     }
                 })
 //                .setPositiveButton("OK", null)
